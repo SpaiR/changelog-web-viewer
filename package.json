@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Small application to view ingame changelog from browser.",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SpaiR/changelog-web-viewer.git"
+  },
   "scripts": {
     "start": "node app/server.js"
   },
