@@ -1,0 +1,19 @@
+{
+  "name": "changelog-web-viewer",
+  "version": "1.0.0",
+  "description": "Small application to view ingame changelog from browser.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "SpaiR",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1",
+    "hbs-utils": "0.0.4",
+    "ms": "^2.1.1",
+    "request": "^2.83.0"
+  }
+}
