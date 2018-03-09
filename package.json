@@ -2,9 +2,9 @@
   "name": "changelog-web-viewer",
   "version": "1.0.0",
   "description": "Small application to view ingame changelog from browser.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app/server.js"
   },
   "author": "SpaiR",
   "license": "MIT",

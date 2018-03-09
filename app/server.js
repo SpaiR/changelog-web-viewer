@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     res.render('index');
 });
 
-app.listen(config.port);
+app.listen(8080);
 
 function updateChangelog() {
     const CHANGELOG_PATH = path.join(__dirname + '/changelog.html');

@@ -1,5 +1,4 @@
-var config = {
-    port: 8080,
+const config = {
     orgName: 'TauCetiStation',
     repoName: 'TauCetiClassic',
     agentName: 'TauCeti-Web-Viewer',
