@@ -24,8 +24,6 @@ app.get('/', function (req, res) {
 app.listen(8080);
 
 function updateChangelog() {
-    const CHANGELOG_PATH = path.join(__dirname + '/changelog.html');
-
     request.get({
         baseUrl: 'https://api.github.com',
         url: `/repos/${config.orgName}/${config.repoName}/contents/${config.changelogPath}`,
@@ -37,15 +35,8 @@ function updateChangelog() {
         if (err) throw err;
 
         if (body) {
-            if (fs.existsSync(CHANGELOG_PATH)) {
-                fs.unlinkSync(CHANGELOG_PATH);
-            }
-
-            let $ = cheerio.load(body);
-
-            fs.writeFile(CHANGELOG_PATH, $('body').contents(), (error) => {
-                if (error) throw error;
-            });
+            const $ = cheerio.load(body);
+            fs.writeFileSync(path.join(__dirname + '/changelog.html'), $('body').contents());
         }
     });
 
