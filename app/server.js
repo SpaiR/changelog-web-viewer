@@ -36,7 +36,7 @@ function updateChangelog() {
 
         if (body) {
             const $ = cheerio.load(body);
-            fs.writeFileSync(path.join(__dirname + '/changelog.html'), $('body').contents());
+            fs.writeFileSync(path.join(__dirname + '/changelog.html'), $('body').html());
         }
     });
 
