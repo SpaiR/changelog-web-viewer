@@ -11,13 +11,14 @@ const app = express();
 
 updateChangelog();
 
-app.use(express.static(__dirname + '/static'));
+app.use(express.static(__dirname + '/static', { maxAge: '30d' }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname);
 
 hbsutils.registerWatchedPartials(__dirname);
 
 app.get('/', function (req, res) {
+    res.setHeader('Cache-Control', 'public, max-age=21600');
     res.render('index');
 });
 
